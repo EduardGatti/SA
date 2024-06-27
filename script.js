@@ -1,6 +1,6 @@
 const campoLogin = document.getElementById("usarname")
 const campoSenha = document.getElementById("senha")
-const campoNovoLogin = document.getElementById("newUsarname")
+const campoNovoLogin = document.getElementById("newUsername")
 const campoNovaSenha = document.getElementById("newSenha")
 const campoRepSenha = document.getElementById("confirmSenha")
 
@@ -31,7 +31,7 @@ function login(){
 
 function cadastro(){
     if (campoNovaSenha.value == campoRepSenha.value){
-        let usuario = {
+        const usuario = {
 
             login: campoNovoLogin.value,
             senha: campoNovaSenha.value,
@@ -44,7 +44,7 @@ function cadastro(){
     }
     if(existe(usuario, bancoDeDados)){
         alert("Esse login ja está cadastrado!")
-        window.location.href = "index.html"  
+        window.location.href = "home.html"  
     }
     else{
         bancoDeDados.push(usuario)
@@ -53,7 +53,7 @@ function cadastro(){
         window.location.href = "index.html"
     }
     }else{
-        alert("As senhas não são iguais!")
+    alert("As senhas não são iguais!")
     }
 
 }
@@ -67,4 +67,7 @@ function existe(usuario, bancoDeDados){
 
 function entrar(){
     window.location.href = "home.html"
+}
+function cadastre(){
+    window.location.href = "registrar.html"
 }

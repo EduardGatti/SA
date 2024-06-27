@@ -6,17 +6,12 @@
 .cadastro{
     text-align: center;
 }
-h1{
-
-    align-items: center;
-
-}
 #imgLogin{
     font-size: 30px;
     filter: blur(0.5px);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: #fff;
-    border-radius: 7px;
+    border-radius: 15px;
     width: 130vh;
     margin-left: 225px;
     height: 170px;   
@@ -24,6 +19,23 @@ h1{
     background-image: url("unnamed.jpg");
     background-size: contain;
     background-repeat: no-repeat;
+}
+#textCadastro{
+
+    font-size: 70px;
+    filter: blur(0.5px);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #fff;
+    border-radius: 15px;
+    width: 130vh;
+    margin-left: 40px;
+    margin-top: -30px;
+    height: 160px;   
+    padding: 20px;
+    background-image: url("unnamed.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+
 }
 body{
 
@@ -35,14 +47,86 @@ body{
     height: 100vh;
 
 }
-#inputBoder{
+#usarname{
+    padding: 4px;
+    border-radius: 4px;
+    border-color: #b8b8b8;
+    
+}
+#newUsername{
 
-    border-radius: 15px;
+    padding: 4px;
+    border-radius: 4px;
+    border-color: #b8b8b8;
+    
 
 }
+#senha{
+
+    padding: 4px;
+    border-radius: 4px;
+    border-color: #b8b8b8;
+
+
+
+}
+#newSenha{
+
+    padding: 4px;
+    border-radius: 4px;
+    border-color: #b8b8b8; 
+
+
+}
+#cadastrar{
+
+    width: 30vw;
+    height: 35vh;
+    text-align: center;
+    box-shadow: #000000;
+    border: 1px solid rgb(70, 71, 72);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 7px;
+    margin-left: 240px;
+    
+
+}
+#tituloCadastro{
+
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 40px;
+    transform: rotate(270deg);
+    color: #868080;
+    margin-right: 290px;
+    margin-top: 130px;
+
+}
+#cadastre-se{
+    font-size: 20px;
+    color: #5d5d5d;
+    margin-top: -208px;
+}
+#confirmSenha{
+
+    padding: 4px;
+    border-radius: 4px;
+    border-color: #b8b8b8;
+
+}
+#textLogar{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 50px;
+    transform: rotate(270deg);
+    color: #868080;
+    margin-right: 300px;
+    margin-top: 100px;
+    
+}
+
 #inputLogin{
-    width: 22vw;
-    height: 23vh;
+    width: 27vw;
+    height: 30vh;
     text-align: center;
     box-shadow: #5d5d5d;
     border: 1px solid rgb(70, 71, 72);
@@ -53,10 +137,18 @@ body{
     
 
 }
+
 #BotaoDois{
-    
-    margin-left: 300px;
+    color: #868080;
+    margin-top: -170px;
+    margin-left: 410px;
     border-radius: 10px;
+
+}
+#texto2{
+   margin-top: -190px;
+   font-size: 20px;
+   color: #5d5d5d;
 
 }
 #logoLogin{
@@ -66,6 +158,16 @@ body{
     padding: 20px;
     top: 0;
 }
+#logoCadastro{
+
+    height: 100px;
+    width: auto;
+    margin-right: 130px;
+    padding: 20px;
+    top: 0;
+
+}
+
 
 #pesquisarLogin{
     position: relative;
@@ -75,9 +177,18 @@ body{
     top: -60px;
     right: 10px;
 }
+#pesquisarCadastro{
+    position: relative;
+    text-align: left;
+    width: 35vw;
+    height: 3vh;
+    top: -60px;
+    right: 120px;
+}
+
 
 .global {
-    background-color: #efefef;
+    background-color: #ffffff;
     padding: 20px;
     width: 100vw;
     height: 100vh;
