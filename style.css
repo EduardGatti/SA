@@ -107,6 +107,19 @@ body{
     color: #5d5d5d;
     margin-top: -208px;
 }
+
+button {    
+   
+    width: 25vh;
+    padding: 7px;
+    background-color: #4CAF50;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
 #confirmSenha{
 
     padding: 4px;
@@ -194,46 +207,60 @@ body{
     height: 100vh;
 }
 
-button {    
-   
-    width: 25vh;
-    padding: 7px;
-    background-color: #4CAF50;
-    color: rgb(255, 255, 255);
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    border-radius: 10px;
-}
-
 button:hover {
     background-color: #5fa262;
 }
 #logo{
-    height: 75px;
+    height: 80px;
     width: auto;
     padding: 20px;
+    margin-left: 10px;
     top: 0;
 }
 #pesquisar{
     position: relative;
-    width: 20vw;
+    width: 26vw;
     height: 3vh;
     top: 45px;
-    left: 25vw;
+    left: 22vw;
+    padding: 4px;
+    border-radius: 4px;
+    border-color: #636262; 
 }
 #entrar{
     position: relative;
-    width: auto;
-    height: 4vh;
+    width: 7vw;
+    height: 5vh;
     top: 45px;
-    left: 55vw;
-
+    left: 35vw;
+    background-color: #4cb151;
+    color: #fff;
+    border-radius: 7px;
 }
 .cabecalho{
     height: min-content;
     width: 98vw;
     display: inline-flex;
     gap: 10px;
+    margin-bottom: 520px;
+    background-color: #636262;
+    border-radius: 7px;
     top: 0;    
+}
+#pesquisarHome{
+    position: relative;
+    width: 5vw;
+    height: 5vh;
+    top: 35px;
+    left: 22.3vw;
+    background-color: #636262 ;
+    border: #fff;
+
+
+
+}
+#iconPesquisar{
+
+width: 30px;
+
 }

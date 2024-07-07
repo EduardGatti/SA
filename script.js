@@ -1,4 +1,4 @@
-const campoLogin = document.getElementById("usarname")
+const campoLogin = document.getElementById("username")
 const campoSenha = document.getElementById("senha")
 const campoNovoLogin = document.getElementById("newUsername")
 const campoNovaSenha = document.getElementById("newSenha")
