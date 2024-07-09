@@ -6,7 +6,7 @@ const campoRepSenha = document.getElementById("confirmSenha")
 
 
 
-function login(){
+function login(){           
     let login = campoLogin.value
     let senha = campoSenha.value
 
@@ -27,9 +27,17 @@ function login(){
         }
     }
     alert(mensagem)
+    form.reset(); 
 }
 
 function cadastro(){
+
+    if(campoNovoLogin.value == "" || campoNovaSenha == "" ){
+
+        alert("Você não preencheu os dados solicitados!");
+        return
+
+    }
     if (campoNovaSenha.value == campoRepSenha.value){
         const usuario = {
 
@@ -55,8 +63,10 @@ function cadastro(){
     }else{
     alert("As senhas não são iguais!")
     }
-
+    localStorage.clear(bancoDeDados);
 }
+
+
 
 function existe(usuario, bancoDeDados){
     for(let verificado of bancoDeDados){
