@@ -3,6 +3,7 @@ const campoSenha = document.getElementById("senha")
 const campoNovoLogin = document.getElementById("newUsername")
 const campoNovaSenha = document.getElementById("newSenha")
 const campoRepSenha = document.getElementById("confirmSenha")
+const campoEmail = document.getElementById("newEmail")
 
 
 
@@ -32,7 +33,7 @@ function login(){
 
 function cadastro(){
 
-    if(campoNovoLogin.value == "" || campoNovaSenha == "" ){
+    if(campoNovoLogin.value == "" || campoNovaSenha.value == "" || campoEmail.value == "" || campoRepSenha.value == ""){
 
         alert("Você não preencheu os dados solicitados!");
         return
@@ -41,6 +42,7 @@ function cadastro(){
     if (campoNovaSenha.value == campoRepSenha.value){
         const usuario = {
 
+            email: campoEmail.value,
             login: campoNovoLogin.value,
             senha: campoNovaSenha.value,
 
@@ -68,6 +70,7 @@ function cadastro(){
 
 
 
+
 function existe(usuario, bancoDeDados){
     for(let verificado of bancoDeDados){
         if(verificado.login == usuario.login)
@@ -81,3 +84,5 @@ function entrar(){
 function cadastre(){
     window.location.href = "registrar.html"
 }
+
+

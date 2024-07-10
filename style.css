@@ -61,6 +61,13 @@ body{
     
 
 }
+#newEmail{
+
+    padding: 4px;
+    border-radius: 4px;
+    border-color: #b8b8b8;
+
+}
 #senha{
 
     padding: 4px;
@@ -81,7 +88,7 @@ body{
 #cadastrar{
 
     width: 30vw;
-    height: 35vh;
+    height: 40vh;
     text-align: center;
     box-shadow: #000000;
     border: 1px solid rgb(70, 71, 72);
@@ -197,6 +204,10 @@ button {
     height: 3vh;
     top: -60px;
     right: 120px;
+    
+    padding: 4px;
+    border-radius: 4px;
+    border-color: #b8b8b8; 
 }
 
 
@@ -264,3 +275,10 @@ button:hover {
 width: 25px;
 
 }
+.card{
+
+    margin-top: 200px;
+
+
+}
+
