@@ -250,7 +250,7 @@ button:hover {
 }
 .cabecalho{
     height: min-content;
-    width: 98vw;
+    width: 98.7vw;
     display: inline-flex;
     gap: 10px;
     margin-bottom: 520px;
@@ -275,10 +275,15 @@ button:hover {
 width: 25px;
 
 }
-.card{
+#crud{
 
-    margin-top: 200px;
-
+    position: relative;
+    width: 7vw;
+    height: 5vh;
+    top: 45px;
+    left: 35vw;
+    background-color: #4cb151;
+    color: #fff;
+    border-radius: 7px;
 
 }
-

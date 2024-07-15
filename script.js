@@ -67,6 +67,130 @@ function cadastro(){
     }
     localStorage.clear(bancoDeDados);
 }
+let nome = document.getElementById('productName')
+let descricao = document.getElementById('productDescription')
+let preco = document.getElementById('productPrice')
+
+let produtos = JSON.parse(localStorage.getItem("produtos")) || []
+let encontrado = -1
+
+function cadastrar(){
+    let produto = {
+        nome: nome.value,
+        descricao: descricao.value,
+        preco: Number(preco.value)
+    }
+        produtos.push(produto) 
+        console.log(produtos);
+        limparFormulario()
+
+        localStorage.setItem("produtos", JSON.stringify(produtos))
+        alert("Produto Cadastrado com sucesso")
+    
+}
+
+function pesquisar(){
+    let pesquisa = nome.value
+    for(i=0;i<produtos.length;i++){
+        console.log(produtos[i].nome)
+        // testar se é o certo
+        if(produtos[i].nome == pesquisa){
+           
+            descricao.value = produtos[i].descricao
+            preco.value = produtos[i].preco
+            encontrado = i
+
+        }
+    }
+
+    console.log(pesquisa);
+}
+
+// function gerarFakes(){
+
+//     let produto 
+//      produto = {
+
+//         nome: "w",
+//         descricao: 'w',
+//         preco: 22
+        
+
+// }
+
+// produtos.push(produto)
+
+//      produto = {
+
+//         nome: "q",
+//         descricao: 'q',
+//         preco: 23
+        
+
+// }
+
+// produtos.push(produto)
+
+//      produto = {
+
+//         nome: "e",
+//         descricao: 'e',
+//         preco: 24
+        
+
+// }
+// produtos.push(produto)
+        
+
+// }
+
+function limparFormulario(){
+
+    nome.value = ''
+    descricao.value = ''
+    preco.value = ''
+    nome.focus()
+
+}
+
+function salvar(){
+
+    produtos[encontrado].nome = nome.value
+    produtos[encontrado].descricao = descricao.value
+    produtos[encontrado].preco = Number(preco.value)
+    alert("Produto alterado com sucesso!")
+    limparFormulario()
+    localStorage.setItem("produtos", JSON.stringify(produtos))
+
+}
+
+function deletar(){
+    if(encontrado != -1){
+
+        produtos.splice(encontrado,1);
+        limparFormulario()
+        alert("Produto removido com sucesso.")
+        encontrado = -1
+        localStorage.setItem("produtos", JSON.stringify(produtos))
+
+    }else{
+
+        alert("Pesquisa nao foi efetuada.")
+
+    }
+
+
+}
+function lista(){
+
+
+
+}
+function crudProdutos(){
+
+    window.location.href = "card.html"
+
+}
 
 
 
@@ -84,5 +208,9 @@ function entrar(){
 function cadastre(){
     window.location.href = "registrar.html"
 }
+function voltar(){
 
+    window.location.href = "index.html"
+
+}
 
