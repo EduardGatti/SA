@@ -13,28 +13,37 @@
 <body>
     <div class="container">
         <div class="cabecalho">
-            <img id="logo" src="assets/Logo1.png" alt="Imagem da logo">
-            <input type="text" placeholder="O que procuras para hoje..." id="pesquisar" required>
-            <button id="pesquisarHome" onclick="pesquisar()"><img id="iconPesquisar" src="assets/lets-icons--search-light.svg" alt=""></button>
-            <button id="entrar" onclick="entrar()">Logar</button>
-            <button id="crud" onclick="crudProdutos()">Cadastrar Produtos</button>
-        </div>
-        <!-- <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src=".../100px180/?text=Image cap" alt="Imagem de capa do card">
-            <div class="card-body">
-              <h5 class="card-title">Título do card</h5>
-              <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
+            <img id="logoIndex" src="assets/Logo1.png" alt="Imagem da logo">
+            <div class="pesquisar">
+
+              <input type="text" placeholder="O que procuras para hoje..." id="pesquisarIndex" required>
+              <button id="pesquisarHome" onclick="pesquisar()"><img id="iconPesquisarIndex" src="assets/lets-icons--search-light.svg" alt=""></button>
+
             </div>
-            <ul class="list-group list-group-flush">
+            
+            <div class="botaoIndex">
+              <button id="entrar" onclick="entrar()">Logar</button>
+              <button id="crud" onclick="crudProdutos()">Cadastrar Produtos</button>
+
+            </div>
+        </div>
+        <div id="card">
+            
+            <div class="card-body">
+              <h3 class="card-title">Box de Vidro blindex</h3>
+              <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
+            <ul class="listaCard">
               <li class="list-group-item">Cras justo odio</li>
               <li class="list-group-item">Dapibus ac facilisis in</li>
               <li class="list-group-item">Vestibulum at eros</li>
             </ul>
+            </div>
             <div class="card-body">
-              <a href="#" class="card-link">Fazer orçamento</a>
+              <button class="card-link">Fazer orçamento</button>
               
-            </div> -->
+            </div>
           </div>
+        
     </div>
     <script src="script.js"></script>
 </body>
