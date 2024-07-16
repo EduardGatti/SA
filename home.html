@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
     <div class="global">
-
+        <div class="cabecalho">
         <img id="logoLogin" src="assets/Logo.png" alt="Imagem da logo">
-        <input type="text" placeholder="Pesquisar" id="pesquisarLogin">
 
-    <div class="login">
+        <div class="pesquisar">
 
-        <div id="imgLogin">
+              <input type="text" placeholder="O que procuras para hoje..." id="pesquisarIndex" required>
+              <button id="pesquisarHome" onclick="pesquisar()"><img id="iconPesquisarIndex" src="assets/lets-icons--search-light.svg" alt=""></button>
+            </div>
+            </div>
+
+    <div class="Home">
+
+        <div class="imgHome">
             <h1>LOGIN</h1>
         </div>
 
-        <div id="inputLogin">
+        
                 
                 <h2 id="textLogar">LOGAR</h2>
                 <p id="texto2">Realize seu Login</p>
@@ -28,14 +34,11 @@
                 <input type="password" placeholder="Digite sua senha" id="senha" required><br><br>
                 <button onclick="login()">Logar</button><br><br>
                 
-        </div>
-        <div id="BotaoDois">
+        
+        
 
             <h2>Não se cadastrou ainda?</h2>
             <button id="cadastre" onclick="cadastre()">Cadastra-se</button>
-        </div>
-
-    </div>
     </div>
 
 

@@ -4,6 +4,7 @@ const campoNovoLogin = document.getElementById("newUsername")
 const campoNovaSenha = document.getElementById("newSenha")
 const campoRepSenha = document.getElementById("confirmSenha")
 const campoEmail = document.getElementById("newEmail")
+const painel = document.getElementById('painel')
 
 
 
@@ -105,6 +106,15 @@ function pesquisar(){
 
     console.log(pesquisa);
 }
+function lista(){
+    painel.innerHTML = ''
+    for(i=0; i<produtos.length; i++){
+        painel.innerHTML += '<h2>'+produtos[i].nome+'</h2>'
+                '<p>'+produtos[i].descricao + '</p>'
+                '<p>R$' + produtos[i].preco.toFixed(2) + '</p>'
+    }
+}
+
 
 // function gerarFakes(){
 
@@ -209,6 +219,11 @@ function cadastre(){
     window.location.href = "registrar.html"
 }
 function voltar(){
+
+    window.location.href = "index.html"
+
+}
+function voltarCadastro(){
 
     window.location.href = "index.html"
 
