@@ -1,0 +1,100 @@
+#logoCadastro{
+    
+    width: 180px;
+    margin-left: 15px;
+
+}
+.pesquisarCard{
+    position: absolute;
+
+    left: 39%;
+    top: 8.8%;
+
+}
+.cabecalho{
+    
+    background-color: #636262;
+    border-radius: 7px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+button{
+    
+    background-color: #4caf50;
+    color: azure;
+    border: none;
+    border-radius: 7px;
+    padding: 7px;
+    cursor: pointer;
+
+}
+#pesquisarCadastro{
+
+    width: 26vw;
+    height: 3vh;
+    border-radius: 4px;
+    padding: 5px;
+    border: none;
+    box-shadow: 2px 2px 2px  rgb(49, 48, 48) ;
+}
+#pesquisar{
+    position: relative;
+    background-color: #636262;
+    border: #fff;
+    top: 5px;
+
+}
+#iconPesquisarCadastro{
+    width:25px;
+}
+#textCadastro{
+    font-size: 70px;
+    filter: blur(0.5px);
+    color: white;
+    border-radius: 15px;
+    background-image: url("assets/unnamed.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 70vw;
+    height: 11vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;    
+}
+
+.imgCad{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+
+}
+
+.registrar{
+
+    width: 30vw;
+    box-shadow: #000000;
+    border: 1px solid rgb(70, 71, 72);
+    border-radius: 10px;
+    padding: 15px;
+    margin-left: 33%;
+    font-size: 20px;
+    
+}
+input{
+
+    padding: 5px;
+    border-radius: 4px;
+    border-color: #0c0c0c;
+    border: none;
+    box-shadow: 2px 2px  2px 1px #575757;
+    
+}
+.cadastro{
+    text-align: center;
+}
+#buttonCadastro{
+    width: 13vw;
+}

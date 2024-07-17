@@ -203,8 +203,6 @@ function crudProdutos(){
 }
 
 
-
-
 function existe(usuario, bancoDeDados){
     for(let verificado of bancoDeDados){
         if(verificado.login == usuario.login)
@@ -223,9 +221,22 @@ function voltar(){
     window.location.href = "index.html"
 
 }
-function voltarCadastro(){
 
-    window.location.href = "index.html"
+function pesquisar(){
 
+    let pesquisa = nome.value
+    for(i = 0; i<produtos.length; i++){
+        console.log(produtos[i].nome)
+        if(produtos[i].nome == pesquisa){
+           
+            descricao.value = produtos[i].descricao
+            preco.value = produtos[i].preco
+            encontrado = i
+
+        }
+    }
+
+    console.log(pesquisa);
+    
 }
 

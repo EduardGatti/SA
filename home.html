@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <link rel="stylesheet" href="login/style.css">
+    <link rel="stylesheet" href="styleLogin.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -9,7 +9,7 @@
 <body>
     <div class="global">
         <div class="cabecalho">
-        <img id="logoLogin" src="assets/Logo.png" alt="Imagem da logo">
+        <img onclick="voltar()" id="logoLogin" src="assets/Logo1.png" alt="Imagem da logo">
 
         <div class="pesquisar">
 
@@ -18,29 +18,28 @@
             </div>
             </div>
 
-    <div class="Home">
+            <div class="imgHome">
+            <h1 id="textlogin">LOGIN</h1>
+            </div>
+            <div class="login">
 
-        <div class="imgHome">
-            <h1>LOGIN</h1>
-        </div>
-
-        
-                
-                <h2 id="textLogar">LOGAR</h2>
-                <p id="texto2">Realize seu Login</p>
+                <h2 id="texto2">Realize seu Login</h2>
                 <br><input type="text" placeholder="Digite seu usúario" id="username" required><br><br>
                 
-                
                 <input type="password" placeholder="Digite sua senha" id="senha" required><br><br>
-                <button onclick="login()">Logar</button><br><br>
+                <button onclick="login()">Logar</button>
+
+            
                 
-        
-        
+                </div>
+                <div class="registrar">
+                <p>Não se cadastrou ainda?</p>
+                <button id="cadastre" onclick="cadastre()">Cadastra-se</button>
+                </div>
+            </div>
 
-            <h2>Não se cadastrou ainda?</h2>
-            <button id="cadastre" onclick="cadastre()">Cadastra-se</button>
+            
     </div>
-
 
     <script src="script.js"></script>
 </body>

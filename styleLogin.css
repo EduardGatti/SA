@@ -1,0 +1,108 @@
+#logoLogin{
+    
+    width: 180px;
+    margin-left: 15px;
+
+}
+.pesquisar{
+    position: absolute;
+
+    left: 39%;
+    top: 8.8%;
+
+}
+.cabecalho{
+    
+    background-color: #636262;
+    border-radius: 7px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+button{
+    
+    background-color: #4caf50;
+    color: azure;
+    border: none;
+    border-radius: 7px;
+    padding: 7px;
+    cursor: pointer;
+
+}
+#pesquisarIndex{
+
+    width: 26vw;
+    height: 3vh;
+    border-radius: 4px;
+    padding: 5px;
+    border: none;
+    box-shadow: 2px 2px 2px  rgb(49, 48, 48) ;
+}
+#pesquisarHome{
+    position: relative;
+    background-color: #636262;
+    border: #fff;
+    top: 5px;
+
+}
+#iconPesquisarIndex{
+    width:25px;
+}
+
+#textlogin{
+    font-size: 70px;
+    filter: blur(0.5px);
+    color: white;
+    border-radius: 15px;
+    background-image: url("assets/unnamed.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 70vw;
+    height: 11vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;    
+}
+.imgHome{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+
+}
+
+.login{
+
+    width: 30vw;
+    box-shadow: #000000;
+    border: 1px solid rgb(70, 71, 72);
+    border-radius: 10px;
+    padding: 15px;
+    margin-left: 12%;
+    font-size: 20px;
+    margin-bottom: 2%;
+    text-align: center;
+    
+}
+
+input{
+
+    padding: 5px;
+    border-radius: 4px;
+    border-color: #0c0c0c;
+    border: none;
+    box-shadow: 2px 2px  2px 1px #575757;
+    
+}
+
+.registrar{
+    width: 30vw;
+    box-shadow: #000000;
+    padding: 15px;
+    margin-left: 47%;
+    margin-top: -15%;
+    font-size: 20px;
+    text-align: center;
+}

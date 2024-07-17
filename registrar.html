@@ -1,23 +1,35 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleRegistrar.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
     <div class="cadastro">
-        <img onclick="voltarCadastro()" id="logoCadastro" src="assets/Logo.png" alt="Imagem da logo">
-        <input type="text" placeholder="Pesquisar" id="pesquisarCadastro">
-        <h2 id="textCadastro">CADASTRAR</h2>
-        <div id="cadastrar">
-        <h2 id="tituloCadastro">CADASTRO</h2>
-        <P id="cadastre-se">Realize seu Cadastro!</P>
-        <input type="email" placeholder="Digite seu email" id="newEmail" required><br><br>
-        <input type="text" placeholder="Digite seu usúario" id="newUsername" required><br><br>
-        <input type="password" placeholder="Digite sua senha" id="newSenha" required><br><br>
-        <input type="password" placeholder="Confirme sua senha" id="confirmSenha" required><br><br>
+        <div class="cabecalho">
+            <img onclick="voltar()" id="logoCadastro" src="assets/Logo1.png" alt="Imagem da logo">
+            
+            <div class="pesquisarCard">
+                
+                <input type="text" placeholder="Pesquisar" id="pesquisarCadastro">
+                <button id="pesquisar" onclick="pesquisar()"><img id="iconPesquisarCadastro" src="assets/lets-icons--search-light.svg" alt=""></button>
+            </div>
+        </div>
+        <div class="imgCad">
+        <h2 id="textCadastro">CADASTRE-SE</h2>
+        </div>
+        <div class="registrar">
+            
+        
+        <h2 id="realizeRegistrar">Realize seu Cadastro</h2>
+            
+            <input type="email" placeholder="Digite seu email" id="newEmail" required><br><br>
+            <input type="text" placeholder="Digite seu usúario" id="newUsername" required><br><br>
+            <input type="password" placeholder="Digite sua senha" id="newSenha" required><br><br>
+            <input type="password" placeholder="Confirme sua senha" id="confirmSenha" required><br><br>
+         
         <button id="buttonCadastro" onclick="cadastro()">Cadastrar-se</button><br>
     
     </div>
