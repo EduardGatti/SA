@@ -239,4 +239,9 @@ function pesquisar(){
     console.log(pesquisa);
     
 }
+function orçamento(){
+
+ window.location.href = "orçamento.html"
+
+}
 

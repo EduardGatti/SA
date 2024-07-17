@@ -45,5 +45,23 @@ button{
 
     width:25px;
     
+}
+.card{
+
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(200px);
+    
+    
+
+}
+#card-body{
+    background-color: #f8f9fa; 
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    flex: 1; 
+   
+    
 
 }

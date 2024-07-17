@@ -8,7 +8,7 @@
     position: absolute;
 
     left: 39%;
-    top: 8.8%;
+    top: 6%;
 
 }
 .cabecalho{
@@ -51,6 +51,7 @@ button{
     width:25px;
 }
 #textCadastro{
+    
     font-size: 70px;
     filter: blur(0.5px);
     color: white;
@@ -59,7 +60,7 @@ button{
     background-size: contain;
     background-repeat: no-repeat;
     width: 70vw;
-    height: 11vh;
+    height: 15.8vh;
     padding: 100px;
     display: flex;
     justify-content: center;    
