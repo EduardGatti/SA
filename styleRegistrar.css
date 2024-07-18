@@ -22,13 +22,19 @@
 
 }
 button{
-    
-    background-color: #4caf50;
+
+    background-color: #007bff;
     color: azure;
     border: none;
     border-radius: 7px;
     padding: 7px;
     cursor: pointer;
+    transition: backgroud-color 0.3s;
+
+}
+button:hover{
+
+    background-color: #0056b3;
 
 }
 #pesquisarCadastro{

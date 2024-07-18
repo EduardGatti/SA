@@ -5,6 +5,8 @@ const campoNovaSenha = document.getElementById("newSenha")
 const campoRepSenha = document.getElementById("confirmSenha")
 const campoEmail = document.getElementById("newEmail")
 const painel = document.getElementById('painel')
+const inputIndex = document.getElementById("pesquisarIndex")
+let filtro = []
 
 
 
@@ -70,16 +72,17 @@ function cadastro(){
 }
 let nome = document.getElementById('productName')
 let descricao = document.getElementById('productDescription')
-let preco = document.getElementById('productPrice')
+let imagem = document.getElementById('productPrice')
 
 let produtos = JSON.parse(localStorage.getItem("produtos")) || []
 let encontrado = -1
 
 function cadastrar(){
     let produto = {
+        id: Date.now(),
         nome: nome.value,
         descricao: descricao.value,
-        preco: Number(preco.value)
+        imagem: imagem.value
     }
         produtos.push(produto) 
         console.log(produtos);
@@ -98,7 +101,7 @@ function pesquisar(){
         if(produtos[i].nome == pesquisa){
            
             descricao.value = produtos[i].descricao
-            preco.value = produtos[i].preco
+            imagem.value = produtos[i].imagem
             encontrado = i
 
         }
@@ -111,7 +114,7 @@ function lista(){
     for(i=0; i<produtos.length; i++){
         painel.innerHTML += '<h2>'+produtos[i].nome+'</h2>'
                 '<p>'+produtos[i].descricao + '</p>'
-                '<p>R$' + produtos[i].preco.toFixed(2) + '</p>'
+                '<p>R$' + produtos[i].imagem + '</p>'
     }
 }
 
@@ -158,7 +161,7 @@ function limparFormulario(){
 
     nome.value = ''
     descricao.value = ''
-    preco.value = ''
+    imagem.value = ''
     nome.focus()
 
 }
@@ -167,7 +170,7 @@ function salvar(){
 
     produtos[encontrado].nome = nome.value
     produtos[encontrado].descricao = descricao.value
-    produtos[encontrado].preco = Number(preco.value)
+    produtos[encontrado].imagem = imagem.value
     alert("Produto alterado com sucesso!")
     limparFormulario()
     localStorage.setItem("produtos", JSON.stringify(produtos))
@@ -239,9 +242,43 @@ function pesquisar(){
     console.log(pesquisa);
     
 }
-function orçamento(){
 
- window.location.href = "orçamento.html"
+function mostrarCardsHome(){
+    let cards = document.getElementById('cards')
 
+    cards.innerHTML = ''
+
+    for(i=0; i<filtro.length; i++){
+        cards.innerHTML += `
+        <div class="card-body" onclick="cadastre()">
+              <img src="${filtro[i].imagem}" alt="">
+              <h3 class="card-title">${filtro[i].nome}</h3>
+              <p class="card-text">${filtro[i].descricao}</p>
+              
+        </div>
+        
+        `
+    }
 }
+
+function filtrar(){
+    
+    filtro = []
+
+for(i = 0; i < produtos.length; i++){
+    if(produtos[i].nome.toUpperCase().includes(inputIndex.value.toUpperCase())){
+
+        filtro.push(produtos[i])
+
+    }
+}
+
+    mostrarCardsHome()
+}
+
+
+
+
+filtro = produtos
+mostrarCardsHome()
 
