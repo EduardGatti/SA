@@ -9,6 +9,14 @@ const inputIndex = document.getElementById("pesquisarIndex")
 const largura = document.getElementById("tamanhoA")
 const comprimento = document.getElementById("tamanhoB")
 let filtro = []
+let nome = document.getElementById('productName')
+let descricao = document.getElementById('productDescription')
+let imagem = document.getElementById('productImg')
+
+
+let produtos = JSON.parse(localStorage.getItem("produtos")) || []
+let encontrado = -1
+let path = '';
 
 
 
@@ -77,28 +85,20 @@ function cadastro() {
     }
     localStorage.clear(bancoDeDados);
 }
-let nome = document.getElementById('productName')
-let descricao = document.getElementById('productDescription')
-let imagem = document.getElementById('productImg')
-
-
-let produtos = JSON.parse(localStorage.getItem("produtos"))
-let encontrado = -1
-// let path = "";
 
 function cadastrar() {
     
-    // const [file] = imagem.files
+    const [file] = imagem.files
 
-    // if (file) {
-    //   path = URL.createObjectURL(file)
-    // }
+    if (file) {
+      path = URL.createObjectURL(file)
+    }
 
     let produto = {
         id: Date.now(),
         nome: nome.value,
         descricao: descricao.value,
-        imagem: value
+        imagem: path
     }
     produtos.push(produto)
     console.log(produtos);
@@ -111,21 +111,32 @@ function cadastrar() {
 
 function pesquisar() {
 
-    let pesquisa = document.getElementById("productName").value
+    let pesquisa = document.getElementById("productName").value.trim()
+    let encontrado = false;
 
-    for (i = 0; i < produtos.length; i++) {
+    for (let i = 0; i < produtos.length; i++) {
         console.log(produtos[i].nome)
-        if (produtos[i].nome == pesquisa) {
+
+        
+        if (produtos[i].nome.toLowerCase() === pesquisa.toLowerCase()) {
 
             document.getElementById('productDescription').value = produtos[i].descricao
-            document.getElementById('productImg').value = produtos[i].imagem
+            document.getElementById('productImg').file = produtos[i].imagem
             encontrado = i
 
+            encontrado = true;
+            break
         }
     }
 
+    if (!encontrado) {
+        alert('Produto não encontrado');
+    }
     console.log(pesquisa);
+
 }
+
+
 function lista() {
     painel.innerHTML = ''
     for (i = 0; i < produtos.length; i++) {
@@ -172,6 +183,7 @@ function deletar() {
 
 
 }
+
 function crudProdutos() {
 
     window.location.href = "card.html"
@@ -199,9 +211,8 @@ function voltar() {
 function orcamento(){
 
     window.location.href = 'orçamento.html'
-    
-}
 
+}
 
 function mostrarCardsHome() {
     let cards = document.getElementById('cards')
@@ -221,8 +232,6 @@ function mostrarCardsHome() {
 
     }
 }
-
-
 
 function filtrar() {
 
@@ -254,14 +263,14 @@ function gerarselecoes(){
         
         <option value="${i}">${filtro[i].nome}</option><br>
         `
-        
-        
     }
-}
+    }
 
 function fazerOrcamento(){
 
     largura = Number(input)
 
 }
+ 
+
 

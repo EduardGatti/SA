@@ -121,7 +121,32 @@ button:hover{
 
   }
   
-  
+  #imgIndex{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+
+
+  }
+  #textIndex{
+
+    font-size: 70px;
+    filter: blur(0.5px);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    border-radius: 15px;
+    background-image: url("assets/unnamed.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 70vw;
+    height: 15.8vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;    
+    transform: translateX(7%);
+
+  }
   .card-link {
     display: inline-block;
     padding: 10px 20px;

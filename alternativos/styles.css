@@ -7,6 +7,12 @@ body {
     height: 100vh;
     margin: 0;
 }
+#logoCrudProdutos{
+
+    width: 200px;
+    transform: translateX(75%);
+
+}
 .container {
     background-color: #fff;
     padding: 20px;
