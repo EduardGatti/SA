@@ -6,43 +6,51 @@ const campoRepSenha = document.getElementById("confirmSenha")
 const campoEmail = document.getElementById("newEmail")
 const painel = document.getElementById('painel')
 const inputIndex = document.getElementById("pesquisarIndex")
+const largura = document.getElementById("tamanhoA")
+const comprimento = document.getElementById("tamanhoB")
 let filtro = []
 
 
 
-function login(){           
+function login() {
     let login = campoLogin.value
     let senha = campoSenha.value
+    let admin = {
+            login: 'admin',
+            senha: '123'
+    }
 
     let mensagem = "Nenhum usuário cadastrado até o momento";
     let bancoDeDados = JSON.parse(localStorage.getItem("bancoDeDados"))
-    if (bancoDeDados == null){
+
+    if (bancoDeDados == null) {
         mensagem = "Usuário ou senha incorreta! "
     }
-    else{
-        for(let usuario of bancoDeDados){
-            if(usuario.login == login && usuario.senha == senha){
+    
+    else {
+        for (let usuario of bancoDeDados) {
+            if (usuario.login == login && usuario.senha == senha) {
                 mensagem = "Parabéns, você logou!"
                 localStorage.setItem("logado", JSON.stringify(usuario))
-                window.location.href = "index.html"
+                window.location.href = "logado.html"
                 break
 
             }
         }
     }
     alert(mensagem)
-    form.reset(); 
+    form.reset();
 }
 
-function cadastro(){
+function cadastro() {
 
-    if(campoNovoLogin.value == "" || campoNovaSenha.value == "" || campoEmail.value == "" || campoRepSenha.value == ""){
+    if (campoNovoLogin.value == "" || campoNovaSenha.value == "" || campoEmail.value == "" || campoRepSenha.value == "") {
 
         alert("Você não preencheu os dados solicitados!");
         return
 
     }
-    if (campoNovaSenha.value == campoRepSenha.value){
+    if (campoNovaSenha.value == campoRepSenha.value) {
         const usuario = {
 
             email: campoEmail.value,
@@ -51,57 +59,66 @@ function cadastro(){
 
         };
 
-    let bancoDeDados = JSON.parse(localStorage.getItem("bancoDeDados"))
-    if(bancoDeDados == null){
-        bancoDeDados = [];
-    }
-    if(existe(usuario, bancoDeDados)){
-        alert("Esse login ja está cadastrado!")
-        window.location.href = "home.html"  
-    }
-    else{
-        bancoDeDados.push(usuario)
-        localStorage.setItem("bancoDeDados", JSON.stringify(bancoDeDados))
-        alert("Usuário cadastrado com sucesso!")
-        window.location.href = "index.html"
-    }
-    }else{
-    alert("As senhas não são iguais!")
+        let bancoDeDados = JSON.parse(localStorage.getItem("bancoDeDados"))
+        if (bancoDeDados == null) {
+            bancoDeDados = [];
+        }
+        if (existe(usuario, bancoDeDados)) {
+            alert("Esse login ja está cadastrado!")
+        }
+        else {
+            bancoDeDados.push(usuario)
+            localStorage.setItem("bancoDeDados", JSON.stringify(bancoDeDados))
+            alert("Usuário cadastrado com sucesso!")
+            window.location.href = "logado.html"
+        }
+    } else {
+        alert("As senhas não são iguais!")
     }
     localStorage.clear(bancoDeDados);
 }
 let nome = document.getElementById('productName')
 let descricao = document.getElementById('productDescription')
-let imagem = document.getElementById('productPrice')
+let imagem = document.getElementById('productImg')
 
-let produtos = JSON.parse(localStorage.getItem("produtos")) || []
+
+let produtos = JSON.parse(localStorage.getItem("produtos"))
 let encontrado = -1
+// let path = "";
 
-function cadastrar(){
+function cadastrar() {
+    
+    // const [file] = imagem.files
+
+    // if (file) {
+    //   path = URL.createObjectURL(file)
+    // }
+
     let produto = {
         id: Date.now(),
         nome: nome.value,
         descricao: descricao.value,
-        imagem: imagem.value
+        imagem: value
     }
-        produtos.push(produto) 
-        console.log(produtos);
-        limparFormulario()
+    produtos.push(produto)
+    console.log(produtos);
+    limparFormulario()
 
-        localStorage.setItem("produtos", JSON.stringify(produtos))
-        alert("Produto Cadastrado com sucesso")
-    
+    localStorage.setItem("produtos", JSON.stringify(produtos))
+    alert("Produto Cadastrado com sucesso")
+
 }
 
-function pesquisar(){
-    let pesquisa = nome.value
-    for(i=0;i<produtos.length;i++){
+function pesquisar() {
+
+    let pesquisa = document.getElementById("productName").value
+
+    for (i = 0; i < produtos.length; i++) {
         console.log(produtos[i].nome)
-        // testar se é o certo
-        if(produtos[i].nome == pesquisa){
-           
-            descricao.value = produtos[i].descricao
-            imagem.value = produtos[i].imagem
+        if (produtos[i].nome == pesquisa) {
+
+            document.getElementById('productDescription').value = produtos[i].descricao
+            document.getElementById('productImg').value = produtos[i].imagem
             encontrado = i
 
         }
@@ -109,55 +126,16 @@ function pesquisar(){
 
     console.log(pesquisa);
 }
-function lista(){
+function lista() {
     painel.innerHTML = ''
-    for(i=0; i<produtos.length; i++){
-        painel.innerHTML += '<h2>'+produtos[i].nome+'</h2>'
-                '<p>'+produtos[i].descricao + '</p>'
-                '<p>R$' + produtos[i].imagem + '</p>'
+    for (i = 0; i < produtos.length; i++) {
+        painel.innerHTML += '<h2>' + produtos[i].nome + '</h2>'
+        '<p>' + produtos[i].descricao + '</p>'
+        '<p>R$' + produtos[i].imagem + '</p>'
     }
 }
 
-
-// function gerarFakes(){
-
-//     let produto 
-//      produto = {
-
-//         nome: "w",
-//         descricao: 'w',
-//         preco: 22
-        
-
-// }
-
-// produtos.push(produto)
-
-//      produto = {
-
-//         nome: "q",
-//         descricao: 'q',
-//         preco: 23
-        
-
-// }
-
-// produtos.push(produto)
-
-//      produto = {
-
-//         nome: "e",
-//         descricao: 'e',
-//         preco: 24
-        
-
-// }
-// produtos.push(produto)
-        
-
-// }
-
-function limparFormulario(){
+function limparFormulario() {
 
     nome.value = ''
     descricao.value = ''
@@ -166,7 +144,7 @@ function limparFormulario(){
 
 }
 
-function salvar(){
+function salvar() {
 
     produtos[encontrado].nome = nome.value
     produtos[encontrado].descricao = descricao.value
@@ -177,16 +155,16 @@ function salvar(){
 
 }
 
-function deletar(){
-    if(encontrado != -1){
+function deletar() {
+    if (encontrado != -1) {
 
-        produtos.splice(encontrado,1);
+        produtos.splice(encontrado, 1);
         limparFormulario()
         alert("Produto removido com sucesso.")
         encontrado = -1
         localStorage.setItem("produtos", JSON.stringify(produtos))
 
-    }else{
+    } else {
 
         alert("Pesquisa nao foi efetuada.")
 
@@ -194,91 +172,96 @@ function deletar(){
 
 
 }
-function lista(){
-
-
-
-}
-function crudProdutos(){
+function crudProdutos() {
 
     window.location.href = "card.html"
 
 }
 
-
-function existe(usuario, bancoDeDados){
-    for(let verificado of bancoDeDados){
-        if(verificado.login == usuario.login)
-        return true
+function existe(usuario, bancoDeDados) {
+    for (let verificado of bancoDeDados) {
+        if (verificado.login == usuario.login)
+            return true
     }
 }
 
-function entrar(){
+function entrar() {
     window.location.href = "home.html"
 }
-function cadastre(){
+function cadastre() {
     window.location.href = "registrar.html"
 }
-function voltar(){
+function voltar() {
 
     window.location.href = "index.html"
 
 }
+function orcamento(){
 
-function pesquisar(){
-
-    let pesquisa = nome.value
-    for(i = 0; i<produtos.length; i++){
-        console.log(produtos[i].nome)
-        if(produtos[i].nome == pesquisa){
-           
-            descricao.value = produtos[i].descricao
-            preco.value = produtos[i].preco
-            encontrado = i
-
-        }
-    }
-
-    console.log(pesquisa);
+    window.location.href = 'orçamento.html'
     
 }
 
-function mostrarCardsHome(){
+
+function mostrarCardsHome() {
     let cards = document.getElementById('cards')
 
-    cards.innerHTML = ''
-
-    for(i=0; i<filtro.length; i++){
+    cards.innerHTML = '';
+    for (i = 0; i < filtro.length; i++) {
+    
         cards.innerHTML += `
-        <div class="card-body" onclick="cadastre()">
-              <img src="${filtro[i].imagem}" alt="">
+        <div class="card-body" onclick="orcamento()">
+              <img src="${filtro[i].imagem}" alt="imagem">
               <h3 class="card-title">${filtro[i].nome}</h3>
               <p class="card-text">${filtro[i].descricao}</p>
               
         </div>
         
         `
+
     }
 }
 
-function filtrar(){
-    
+
+
+function filtrar() {
+
     filtro = []
 
-for(i = 0; i < produtos.length; i++){
-    if(produtos[i].nome.toUpperCase().includes(inputIndex.value.toUpperCase())){
+    for (i = 0; i < produtos.length; i++) {
+        if (produtos[i].nome.toLowerCase().includes(inputIndex.value.toLowerCase())) {
 
-        filtro.push(produtos[i])
+            filtro.push(produtos[i])
 
+        }
     }
-}
 
     mostrarCardsHome()
 }
 
-
-
-
 filtro = produtos
+
 mostrarCardsHome()
+
+
+
+function gerarselecoes(){
+    let opcoes = document.getElementById('opcoes')
+    opcoes.innerHTML = ''
+
+    for(i = 0; i < filtro.length; i++){
+        opcoes.innerHTML += `
+        
+        <option value="${i}">${filtro[i].nome}</option><br>
+        `
+        
+        
+    }
+}
+
+function fazerOrcamento(){
+
+    largura = Number(input)
+
+}
 

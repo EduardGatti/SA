@@ -35,7 +35,7 @@ button:hover{
     width: 26vw;
     height: 3vh;
     border-radius: 4px;
-    padding: 5px;
+    padding: 13px;
     border: none;
     box-shadow: 2px 2px 2px  rgb(49, 48, 48) ;
 
@@ -46,13 +46,14 @@ button:hover{
     border: #fff;
     top: 5px;
 
+
 }
 #iconPesquisarIndex{
 
     width:25px;
     
 }
-.cards{
+#cards{
     margin-top: 80px;
     display: flex;
     flex-wrap: wrap;
@@ -91,7 +92,6 @@ button:hover{
     color: #333;
   }
 
-  
   .card-text {
     font-size: 16px;
     color: #666;
@@ -111,8 +111,8 @@ button:hover{
     color: #555;
     margin-bottom: 5px;
   }
-  #imgbox{
 
+  #imgbox{
     height: 200px;
     width: 140px;
     margin-top: 10px;
@@ -121,8 +121,7 @@ button:hover{
 
   }
   
-
-  /* Estilos para o botão */
+  
   .card-link {
     display: inline-block;
     padding: 10px 20px;
@@ -135,7 +134,19 @@ button:hover{
     transition: background-color 0.3s;
   }
 
-  /* Estilos para o botão quando hover */
+  
   .card-link:hover {
     background-color: #0056b3;
   }
+
+  h1{
+    text-align: center;
+    color: #afa8a8; 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-top: 40px;
+  }
+  
+
+
+
+  

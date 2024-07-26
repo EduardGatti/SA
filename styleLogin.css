@@ -60,6 +60,7 @@ button:hover{
 #textlogin{
     font-size: 70px;
     filter: blur(0.5px);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: white;
     border-radius: 15px;
     background-image: url("assets/unnamed.jpg");

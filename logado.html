@@ -2,7 +2,7 @@
 <html lang="pt-br">
 
 <head>
-    
+    <link rel="stylesheet" href="botstrap.css">
     <link rel="stylesheet" href="style.css">
 
     <meta charset="UTF-8">
@@ -16,14 +16,8 @@
             <img id="logoIndex" src="assets/Logo1.png" alt="Imagem da logo">
             <div class="pesquisar">
 
-              <input type="search" placeholder="O que procuras para hoje..." id="pesquisarIndex" required>
+              <input type="text" placeholder="O que procuras para hoje..." id="pesquisarIndex" required>
               <button id="pesquisarHome" onclick="filtrar()"><img id="iconPesquisarIndex" src="assets/lets-icons--search-light.svg" alt=""></button>
-
-            </div>
-            
-            <div class="botaoIndex">
-              <button id="entrar" onclick="entrar()">Logar</button>
-              <button id="crud" onclick="crudProdutos()">Cadastrar Produtos</button>
 
             </div>
         </div>
@@ -32,8 +26,7 @@
           <h1>SERVIÇOS</h1>
 
         </div>
-        
-        <div id="cards">
+        <div class="cards" id='cards'>
             
             <!-- <div class="card-body" onclick="cadastre()">
               <img id="imgbox" src="box.jpg" alt="">
@@ -45,9 +38,6 @@
             
         
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
 

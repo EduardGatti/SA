@@ -1,11 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
+    <link rel="stylesheet" href="orcamento.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    felipe gay
+<body onload="gerarselecoes()">
+    <div class="cabecalho">
+        <img onclick="voltar()" id="logoIndex" src="assets/Logo1.png" alt="Imagem da logo">
+        <div class="pesquisar">
+        
+          <input type="search" placeholder="O que procuras para hoje..." id="pesquisarOrcamento" required>
+          <button id="iconPesquisarOrçamento" onclick="filtrar()"><img id="iconPesquisarIndex" src="assets/lets-icons--search-light.svg" alt=""></button>
+        
+        </div>
+        
+        <div class="botaoIndex">
+          <button id="entrarOrcamento" onclick="entrar()">Logar</button>
+        </div>
+        </div>
+        
+    <div id="opcao">
+    <label for="opcoes">Escolha um tipo de serviço: </label>
+    <select name="" id="opcoes" onchange="gerarselecoes()">
+        <!-- <option value="1"></option>
+        <option value="2"></option> -->
+    </select>
+    <label for="tamanho">Digite a largura: </label>
+    <input type="number" id="tamanhoA"><br><br>
+    <label for="tamanho">Digite o comprimento: </label>
+    <input type="number" id="tamanhoB"><br><br>
+
+    <button onclick="fazerOrcamento()">Fazer orçamento</button>
+    </div>
+</div>
+
+    
+    
 </body>
+<script src="script.js"></script>
 </html>
