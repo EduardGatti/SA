@@ -4,44 +4,43 @@
     margin-left: 15px;
 
 }
-
 .cabecalho{
 
     background-color: #636262;
     border-radius: 7px;
     padding: 20px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
 
 }
-
-#pesquisarOrcamento{
+#pesquisarIndex{
 
     width: 26vw;
     height: 3vh;
     border-radius: 4px;
-    padding: 16px;
+
     border: none;
     box-shadow: 2px 2px 2px  rgb(49, 48, 48) ;
 
 }
-
 #pesquisarHome{
     position: relative;
     background-color: #636262;
     border: #fff;
     top: 5px;
+    padding: 15px;
+
 
 }
+#iconPesquisarIndex{
 
-#iconPesquisarOrçamento{
-
-    width:35px;
-    height: 35px;
+    width:25px;
     
+} 
+.pesquisar{
+    transform: translateX(85%);
+    padding: 13px;
 }
-
 button{
     background-color: #007bff;
     color: azure;
@@ -80,4 +79,17 @@ label {
 
     width: 65px;
 
+}
+#iconPesquisarOrçamento{
+    position: relative;
+    background-color: #636262;
+    border: #fff;
+    top: 5px;
+
+
+}
+#iconPesquisarIndex{
+
+    width:25px;
+    
 }

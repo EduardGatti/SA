@@ -9,11 +9,11 @@
 <body>
     <div class="cadastro">
         <div class="cabecalho">
-            <img onclick="voltar()" id="logoCadastro" src="assets/Logo1.png" alt="Imagem da logo">
+            <img onclick="voltarIndex()" id="logoCadastro" src="assets/Logo1.png" alt="Imagem da logo">
             
             <div class="pesquisarCard">
                 
-                <input type="text" placeholder="Pesquisar" id="pesquisarCadastro">
+                <input type="text" placeholder="Pesquisar" id="inpPesquisar">
                 <button id="pesquisar" onclick="pesquisar()"><img id="iconPesquisarCadastro" src="assets/lets-icons--search-light.svg" alt=""></button>
             </div>
         </div>
@@ -25,7 +25,7 @@
         
         <h2 id="realizeRegistrar">Realize seu Cadastro</h2>
             
-            <input type="email" placeholder="Digite seu email" id="newEmail" required><br><br>
+            <input type="email" placeholder="Digite seu email" id="newEmail" name="newEmail" required><br><br>
             <input type="text" placeholder="Digite seu usúario" id="newUsername" required><br><br>
             <input type="password" placeholder="Digite sua senha" id="newSenha" required><br><br>
             <input type="password" placeholder="Confirme sua senha" id="confirmSenha" required><br><br>

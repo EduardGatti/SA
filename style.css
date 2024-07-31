@@ -35,7 +35,7 @@ button:hover{
     width: 26vw;
     height: 3vh;
     border-radius: 4px;
-    padding: 13px;
+    
     border: none;
     box-shadow: 2px 2px 2px  rgb(49, 48, 48) ;
 
@@ -53,6 +53,9 @@ button:hover{
     width:25px;
     
 }
+.pesquisar{
+  padding: 13px;
+}
 #cards{
     margin-top: 80px;
     display: flex;
@@ -68,6 +71,7 @@ button:hover{
     width: 17vw;
     height: 55vh;
     padding-left: 15px;
+    overflow: hidden;
     display: flexbox;
     border: none;
     border-radius: 4px;
@@ -171,7 +175,65 @@ button:hover{
     padding-top: 40px;
   }
   
+  .card-body {
+    width: 200px; 
+    height: 300px;
+    border: 1px solid #ccc; 
+    border-radius: 8px;
+    overflow: hidden; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
+  .card-body img {
+    width: 100%; 
+    height: 150px; 
+    object-fit: cover;
+    border-bottom: 1px solid #ddd; 
+  }
 
+  .card-title, .card-text {
+    margin: 10px;
+  }
 
-  
+#perfil{
+  background-color: #636262;
+  transform: translateX(-30px);
+
+}
+#imgPerfil{
+  width: 3vw;
+}
+
+.perfil-container {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-menu a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-menu a:hover {
+    background-color: #ddd;
+}
+
+.perfil-container:hover .dropdown-menu {
+    display: block;
+}

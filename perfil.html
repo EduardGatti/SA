@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="stylesheet" href="perfil.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+</head>
+<body onload="informacaoPerfil()">
+        <div class="cabecalho">
+            <img onclick="voltar()" id="logoIndex" src="assets/Logo1.png" alt="Imagem da logo">
+            <div class="pesquisar">
+
+              <input type="search" placeholder="O que procuras para hoje..." id="pesquisarIndex" required>
+              <button id="pesquisarHome" onclick="filtrar()"><img id="iconPesquisarIndex" src="assets/lets-icons--search-light.svg" alt=""></button>
+
+            </div>
+        </div>
+    <div class="profile-container">
+    <header>
+    <h1>Perfil do Usuário</h1>
+    </header>
+    <section class="profile-info">
+        <img src="assets/codicon--account.png" alt="Avatar do Usuário" class="avatar">  
+    <div class="info" id="info">
+        
+        
+    </div>    
+    <a href="editar-perfil.html" class="edit-button">Editar Informações</a>
+    </section>   
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

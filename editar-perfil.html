@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Perfil</title>
+    <link rel="stylesheet" href="perfil.css">
+</head>
+<body onload = "salvarMudanca()">
+    <div class="cabecalho">
+        <img onclick="voltar()" id="logoIndex" src="assets/Logo1.png" alt="Imagem da logo">
+        <div class="pesquisar">
+
+          <input type="text" placeholder="O que procuras para hoje..." id="pesquisarIndex" required>
+          <button id="pesquisarHome" onclick="filtrar()"><img id="iconPesquisarIndex" src="assets/lets-icons--search-light.svg" alt=""></button>
+
+        </div>
+        </div>
+    <div class="edit-profile-container">
+        <header>
+            <h1>Editar Perfil</h1>
+        </header>
+        <div  id="edit-profile">
+        <!-- <form class="edit-form" id="edit-form">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" value="João Silva" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" value="joao.silva@example.com" required>
+
+            <label for="dob">Data de Nascimento:</label>
+            <input type="date" id="dob" name="dob" value="1990-08-15" required>
+
+            <label for="address">Endereço:</label>
+            <input type="text" id="address" name="address" value="Rua Exemplo, 123, São Paulo, SP" required>
+            <button type="submit" class="save-button">Salvar Alterações</button>
+</form> -->
+</div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
