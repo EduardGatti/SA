@@ -28,7 +28,6 @@
     background-color: #636262;
     border: #fff;
     top: 5px;
-    padding: 15px;
 
 
 }
@@ -92,4 +91,20 @@ label {
 
     width:25px;
     
+}
+#resultadoOrcamento {
+    font-size: 1.2em; 
+    color: #333; 
+    background-color: #f4f4f4; 
+    border: 1px solid #ddd; 
+    padding: 10px; 
+    border-radius: 5px; 
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+#resultadoOrcamento.erro {
+    color: #e74c3c; 
+    font-weight: bold; 
 }

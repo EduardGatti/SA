@@ -8,7 +8,7 @@
     position: absolute;
 
     left: 39%;
-    top: 8%;
+    top: 6%;
 
 }
 .cabecalho{
@@ -43,7 +43,6 @@ button:hover{
     height: 3vh;
     border-radius: 4px;
     padding: 5px;
-    outline: none;
     border: none;
     box-shadow: 2px 2px 2px  rgb(49, 48, 48) ;
 }

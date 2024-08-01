@@ -227,7 +227,7 @@ function cadastre() {
 }
 function voltarAdm() {
 
-    window.location.href = 'loginAdm.html'
+    window.location.href = "loginadm.html"
 
 }
 function voltar() {
@@ -241,39 +241,21 @@ function voltarIndex(){
 function orcamento() {
     const HOME_URL = 'home.html';
     const ORCAMENTO_URL = 'orçamento.html';
-    const ADMVERIFICT_URL = "orçamentoAdm.html"
-    
 
    
         const usuarioLogado = JSON.parse(localStorage.getItem("logado"));
 
-        let login = campoLogin.value
-        let senha = campoSenha.value
-        let loginAdm = "admin_glassvision"
-        let senhaAdm = "123"
-        
-        if (usuarioLogado === null || usuarioLogado === undefined) {
+        if (usuarioLogado == null) {
             window.location.href = HOME_URL;
         } else {
             window.location.href = ORCAMENTO_URL;
         }
-        if(login == loginAdm &&  senha == senhaAdm){
+}
+function orcamentoAdm() {
 
-            window.location.href = ADMVERIFICT_URL
+    window.location.href = 'orcamentoAdm.html'
 
-        }
-    }
-    
-    document.addEventListener('DOMContentLoaded', () => {
-        const formulario = document.getElementById('formLogin'); // Obtém o formulário
-    
-        // Adiciona um ouvinte de evento para o envio do formulário
-        formulario.addEventListener('submit', (event) => {
-            event.preventDefault(); // Impede o envio padrão do formulário
-            verificarLogin(); // Chama a função de verificação de login
-        });
-    });
-
+}
 
 function mostrarCardsHome() {
     let cards = document.getElementById('cards')
@@ -293,6 +275,7 @@ function mostrarCardsHome() {
 
     }
 }
+
 
 function filtrar() {
 
@@ -471,31 +454,31 @@ function fazerOrcamento() {
 
         case "1":
 
-        total = (total * 200) + 400
+        total = (total * 200) + 800
         break;
 
         case '2':
 
-        total = (total * 350) + 400
+        total = (total * 350) + 800
         break;
 
         case "3":
 
-        total = (total * 400) + 400
-        break;
-
-        case "4":
-
-        total = (total * 300) + 500
+        total = (total * 400) + 800
         break;
 
         default:
 
         alert("selecione uma opção valida")
 
-    }
+    
 
     
-    alert("O valor total do orçamento é de: " + total.toFixed(2))
+    document.getElementById("resultadoOrcamento").innerHTML = "Selecione uma opção válida.";
+            return; // Sai da função para não mostrar o resultado do orçamento
+    }
 
+    // Atualiza o conteúdo do elemento com o resultado do orçamento
+    document.getElementById("resultadoOrcamento").innerHTML = "O valor total do orçamento é de: R$ " + total.toFixed(2);
 }
+
